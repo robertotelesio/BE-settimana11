@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Aggiungi un nuovo corso</title>
+</head>
+<body>
+<h1> Aggiungi un nuovo corso universitario</h1>
+	<form action="#" method="post" th:action="@{/corso/inserisci}"
+		th:object="${corsoLaurea}">
+		<div>
+			Codice corso:<input type="text" th:field="*{codiceCorso}"
+				id="codicecorso">
+		</div>
+
+		<div>
+			Nome corso:<input type="text" th:field="*{nome}"
+				id="nome">
+		</div>
+		<div>
+			Indirizzo:<input type="text" th:field="*{indirizzo}"
+				id="indirizzo">
+		</div>
+		
+		<div>
+			Numero esami minimi:<input type="text" th:field="*{esami}"
+				id="esami">
+		</div>
+
+		<input type="submit" value="Conferma">
+
+	</form>
+</body>
+</html>
